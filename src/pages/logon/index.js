@@ -1,9 +1,29 @@
-import React from 'react';
+import React from "react";
+import {FiLogIn } from 'react-icons/fi'
+
+import "./styles.css";
+
+import heroesImg from '../../assets/heroes.png';
+import logoImg from '../../assets/logo.svg';
+
 
 export default function Logon() {
-    return(
+  return (
+    <div className="logon-container">
+      <section className="forr">
+         <img src={logoImg} alt="Be The Hero"/>
+         <form>
+            <h1>Faça seu logon</h1>
+            <input placeholder ="Sua id"/>
+            <button className="button" type= "submit" >Entrar</button>
 
-        <h1>Funcionado</h1>
-
-    );
+            <a href="/register">
+               <FiLogIn size={16} color ="#E02041"/>
+               não tenho cadastro
+            </a>
+         </form>
+      </section>
+      <img src={heroesImg} alt="Heroes"/>
+    </div>
+  );
 }

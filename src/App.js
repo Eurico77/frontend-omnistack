@@ -1,8 +1,12 @@
 import React from "react";
+import './global.css';
 
+import Logon from './pages/logon/';
 
 function App() {
-  return <h1>Inicio de projeto</h1>;
+  return (
+    <Logon />
+  )
 }
 
 export default App;
