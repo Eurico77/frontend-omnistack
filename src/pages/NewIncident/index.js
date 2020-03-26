@@ -25,13 +25,11 @@ export default function NewIncident() {
         </section>
 
         <form>
-          <input placeholder=" Título do caso  " />
-          <textarea placeholder=" " />
-          <input placeholder="Descrição" />
+          <input placeholder= " Título do caso  " />
+          <textarea placeholder= " Descrição " />
+          <input placeholder=" Valor em R$: " />
 
-          <input placeholder="Valor em R$: " />
-
-          <button className="button" type="submit">
+          <button className=" button " type="submit">
             Cadastrar
           </button>
         </form>
