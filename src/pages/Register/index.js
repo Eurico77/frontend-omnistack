@@ -17,6 +17,15 @@ export default function Register() {
 
   function handleRegister(e) {
     e.preventDefalt();
+
+    const data = {
+      name,
+      email,
+      whatsapp,
+      city,
+      uf
+
+    };
   }
   return (
     <div className="register-container">
