@@ -15,7 +15,7 @@ export default function Register() {
   const [city, setCity] =useState('')
   const [uf, setUf] =useState('')
 
-  function handleRegister(e) {
+  async function handleRegister(e) {
     e.preventDefalt();
 
     const data = {
@@ -26,6 +26,14 @@ export default function Register() {
       uf
 
     };
+    try{
+      const res = await  api.post('ongs',data)
+
+    alert(`Sua identificação de acesso: ${ res.data.id }`);
+    }catch(err){
+       alert('Erro de cadastro, tente novamete')
+    }
+    
   }
   return (
     <div className="register-container">
@@ -54,7 +62,7 @@ export default function Register() {
           <input 
           type="email" placeholder="E-mail" 
           value ={email}
-          onChange ={e => setName(e.target.value) } 
+          onChange ={e => setEmail(e.target.value) } 
           />
           <input 
           placeholder="Whatsapp" 
