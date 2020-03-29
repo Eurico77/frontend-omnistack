@@ -41,8 +41,9 @@ export default function Profile() {
       <h1>Casos cadastrados</h1>
 
       <ul>
+
         {incidents.map(incidents => (
-          <li>
+          <li key={incidents.id} >
             <strong>CASO:</strong>
             <p>{incidents.title}</p>
 
@@ -50,7 +51,7 @@ export default function Profile() {
             <p>{incidents.description}</p>
 
             <strong>VALOR:</strong>
-            <p>{incidents.value}</p>
+            <p>{Intl.NumberFormat('pt-BR ',)}</p>
             <button type="button">
               <FiTrash2 size={20} color="#a8a8b3" />
             </button>
