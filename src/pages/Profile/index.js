@@ -25,6 +25,8 @@ export default function Profile() {
       });
   }, [ongId]);
 
+  function handleDeleteIncident()
+
   return (
     <div className="profile-container">
       <header>
